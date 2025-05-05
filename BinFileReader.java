@@ -3,9 +3,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 
-public class BinFileReader {
+public class BinFileReader<T> {
     private File file;
-    private Object object; // Может быть подставлен любой другой класс, записанный в бинарный файл
+    private T object; // Может быть подставлен любой другой класс, записанный в бинарный файл
 
     public BinFileReader(File _file) {
         setFile(_file);
@@ -16,7 +16,7 @@ public class BinFileReader {
             FileInputStream fis = new FileInputStream(this.file);
             ObjectInputStream ois = new ObjectInputStream(fis);
 
-            this.object = (Object) ois.readObject(); // UpCasting
+            this.object = (T) ois.readObject(); // UpCasting
 
             ois.close();
         } catch (IOException | ClassNotFoundException ex) {
@@ -25,14 +25,14 @@ public class BinFileReader {
     }
 
 	public File getFile() { return this.file; }
-    public Object getObject() { return this.object; }
+    public T getObject() { return this.object; }
 	
 	public void setFile(File _file) {
         if(_file.canRead())
             this.file = _file;
     }
 
-    public void setObject(Object _object) {
+    public void setObject(T _object) {
         this.object = _object;
     }
 }
