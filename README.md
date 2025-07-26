@@ -9,3 +9,4 @@
 5. [Пример работы с JNI](https://github.com/Jb192101/JavaExamples/tree/main/JavaNativeInterfaceExample)
 6. [Пример парсинга сайта с помощью библиотеки Jsoup](https://github.com/Jb192101/JavaExamples/tree/main/ParsingSiteExample)
 7. [Пример работы с JDBC (не рекомендуется, лучше используйте Hibernate)](https://github.com/Jb192101/JavaExamples/tree/main/JDBCExample)
+8. [Пример простейшей работы с Hibernate](https://github.com/Jb192101/JavaExamples/tree/main/HibernateExample)
